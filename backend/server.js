@@ -19,7 +19,10 @@ const membershipSchema = new mongoose.Schema({
     last_name: String,
     email: String,
     phone: String,
-    semester_batch: String,
+    address:String,
+    city:String,
+    pincode:String,
+    year: String,
 });
 
 const Membership = mongoose.model('Membership', membershipSchema);
@@ -36,7 +39,11 @@ app.post('/register', (req, res) => {
         last_name: req.body.last_name,
         email: req.body.email,
         phone: req.body.phone,
-        semester_batch: req.body.semester_batch
+        address:req.body.address,
+         city:req.body.city,
+          pincode:req.body.pincode,
+
+        year: req.body.year
     });
 
     newMember.save()
@@ -50,4 +57,4 @@ app.post('/register', (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
-});
+}); 

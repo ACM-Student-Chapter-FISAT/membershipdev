@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 500;
+            color: #333;
+        }
+        .input-field {
+            margin-bottom: 20px;
+        }
+        .input-field input[type="text"],
+        .input-field input[type="email"],
+        .input-field input[type="tel"],
+        .input-field select {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+        .input-field input[type="text"]:focus,
+        .input-field input[type="email"]:focus,
+        .input-field input[type="tel"]:focus,
+        .input-field select:focus {
+            border-color: #4CAF50;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+<body>
+    <div class="container">
+        <h3>Membership Registration</h3>
+        <form id="membershipForm" method="POST" action="/register">
+            <div class="input-field">
+                <input type="text" id="first_name" name="first_name" required>
+                <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="last_name" name="last_name" required>
+                <label for="last_name">Last Name</label>
+            </div>
+            <div class="input-field">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="input-field">
+                <input type="tel" id="phone" name="phone" required>
+                <label for="phone">Phone Number</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="address" name="address" required>
+                <label for="address">Street Address ( Specify your home address )</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="city" name="city" required>
+                <label for="city">City</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="pincode" name="pincode" required>
+                <label for="pincode">Pincode</label>
+            </div>
+            
+
+            <div class="input-field">
+                <select name="year" id="year" required>
+                    <option value="" disabled selected>Choose your year</option>
+                    <option value="1st Year">1st Year</option>
+                    <option value="2nd Year">2nd Year</option>
+                    <option value="3rd Year">3rd Year</option>
+                    <option value="4th Year">4th Year</option>
+                </select>
+                <label for="year">Year</label>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit">Proceed to Payment</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems);
+        });
+    </script>
+</body>
+</html>
