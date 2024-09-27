@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+
+
+
+
+
+
+
+
+
+
 body {
     margin: 0;
     padding: 0;
@@ -7,28 +17,59 @@ body {
     font-optical-sizing: auto;
     background-color: #0F172A;
     color: white;
-    height: 1600px;
-}header {
+    /*height: 1600px;*/
+    overflow: hidden; /* Hide the scroll bar */
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow-y: scroll; /* Allows scrolling but hides scrollbar */
+    scrollbar-width: none; /* For Firefox */
+}
+
+body::-webkit-scrollbar
+ {
+    display: none; /* For Chrome, Safari, and Edge */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+header {
     background-color: #0a1e2d;
     padding: 20px 0;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
-nav ul li a, .member-button {
+nav ul li a
+{
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px;
+    font-size: 18px;
+   
+}
+
+
+.member-button{
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
     font-size: 18px;
 }
 
 .member-button {
-    background-color: #007BFF;
+    background-color: hsl(210, 4%, 9%);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -39,7 +80,7 @@ h1 {
 }
 
 .about-us-content-wrap {
-    max-width: 1300px;
+    max-width: 1000px;
     background-color: #1E293B;
     padding: 40px;
     margin: auto;
@@ -111,7 +152,7 @@ h1 {
     font-family: "Inter", sans-serif;
     height: 60px;
     font-size: 20px;
-    background-color: #0EA5E9;
+    background-color: hsl(0, 0%, 0%);
     color: white;
     border-radius: 4px;
     cursor: pointer;
@@ -206,4 +247,27 @@ h1 {
     .feature p {
         font-size: 18px;
     }
+}
+.scroll-button {
+    position: fixed;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: hsl(180, 2%, 9%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.scroll-up {
+    bottom: 80px;
+}
+
+.scroll-down {
+    bottom: 20px;
+}
+
+.scroll-button:hover {
+    background-color: #2a333b;
 }

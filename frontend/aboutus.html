@@ -8,16 +8,21 @@
 </head>
 <body>
     <header>
-        <img src="" width="100">
+        <a href="https://acm-five-amber.vercel.app/">
+            <img src="/ACM FISAT logo2.png" width="150" alt="ACM FISAT Logo">
+        </a>
+        
         <nav>
             <ul>
                 <li><a href="#about-us">About Us</a></li>
                 <li><a href="#events">Events</a></li>
                 <li><a href="#benefits">Benefits</a></li>
                 <li><a href="#execome">EXECOM</a></li>
-                <li><button class="member-button">Be a Member</button></li>
+                
             </ul>
+            
         </nav>
+        <button class="member-button">Be a Member</button>
     </header>
     
     <main>
@@ -79,5 +84,26 @@
             <p>-------------------------</p>
         </section>
     </main>
+     <!-- Scroll Up and Down buttons -->
+     <button class="scroll-button scroll-up" id="scrollUpBtn">⬆</button>
+     <button class="scroll-button scroll-down" id="scrollDownBtn">⬇</button>
+ 
+     <script>
+         // Scroll Up button functionality
+         document.getElementById('scrollUpBtn').addEventListener('click', function() {
+             window.scrollBy({
+                 top: -window.innerHeight, // Scroll up by one viewport height
+                 behavior: 'smooth' // Smooth scrolling
+             });
+         });
+ 
+         // Scroll Down button functionality
+         document.getElementById('scrollDownBtn').addEventListener('click', function() {
+             window.scrollBy({
+                 top: window.innerHeight, // Scroll down by one viewport height
+                 behavior: 'smooth' // Smooth scrolling
+             });
+         });
+     </script>
 </body>
 </html>
