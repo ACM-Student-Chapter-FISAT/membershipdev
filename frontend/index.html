@@ -6,6 +6,9 @@
     <title>MEMBERSHIP DEVELOPMENT</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/execom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <section class="home-main">
@@ -144,8 +147,68 @@
     </section>
     
     <section id="execome" class="execome">
-        <h1>Execome</h1>
-        <p>-------------------------</p>
+        <header class="execom-title-wrap">
+       
+            <h1 class="execom-title">EXECOM 2024-2025</h1>
+        </header>
+    
+        <main>
+            <div class="members-container">
+                <div class="member">
+                    <div class="photo-container">
+                        <img src="./assets/chair.jpg?height=200&width=200" alt="Member 1" class="member-photo">
+                        <a href="https://www.linkedin.com/in/gauthamprasanth07/" target="_blank" class="linkedin-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <h3>GAUTHAM PRASANTH</h3>
+                    <p>CHAIRPERSON</p>
+                </div>
+                <div class="member">
+                    <div class="photo-container">
+                        <img src="./assets/vice.jpeg?height=200&width=200" alt="Member 2" class="member-photo">
+                        <a href="https://www.linkedin.com/in/rhithika-m-pradeep-8a590a256/" target="_blank" class="linkedin-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <h3>RHITHIKA M PRADEEP</h3>
+                    <p>VICE-CHAIR</p>
+                </div>
+                <div class="member">
+                    <div class="photo-container">
+                        <img src="./assets/Hisham Haskar.JPG?height=200&width=200" alt="Member 3" class="member-photo">
+                        <a href="https://www.linkedin.com/in/hisham-haskar-047b862b5/" target="_blank" class="linkedin-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <h3>HISHAM HASKAR</h3>
+                    <p>SECRETARY</p>
+                </div>
+                <div class="member">
+                    <div class="photo-container">
+                        <img src="./assets/faadil.jpeg?height=200&width=200" alt="Member 4" class="member-photo">
+                        <a href="https://www.linkedin.com/in/faadil-mohammed-07b9461b7/" target="_blank" class="linkedin-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <h3>FAADIL MOHAMMED</h3>
+                    <p>TREASURER</p>
+                </div>
+    
+    
+                <div class="member">
+                    <div class="photo-container">
+                        <img src="/membershipdev/frontend/assets/sruthymiss.JPG" alt="Member 5" class="member-photo">
+                        <a href="https://www.linkedin.com/in/sruthy-suresh-87ba32243/" target="_blank" class="linkedin-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <h3>FACULTY SPONSOR</h3>
+                    <p>Mrs. SRUTHY SURESH</p>
+                </div>
+            </div>
+        </main>
+    
     </section>
      <!-- Scroll Up and Down buttons -->
      <button class="scroll-button scroll-up" id="scrollUpBtn">⬆</button>
@@ -170,6 +233,16 @@
         function toggleMenu() {
         const navLinks = document.querySelector('.nav-links');
         navLinks.classList.toggle('show');
+        ScrollReveal().reveal('.member', { delay: 200, distance: '50px', origin: 'bottom', interval: 200 });
+
+        document.querySelectorAll('.member-photo').forEach(photo => {
+            photo.addEventListener('click', () => {
+                photo.style.animation = 'pulse 0.5s';
+                setTimeout(() => {
+                    photo.style.animation = '';
+                }, 500);
+            });
+        });
 }
 
      </script>
