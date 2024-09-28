@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXECOM 24</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+</head>
+<body>
+
+    <div class="logo"></div>
+            <img src="/placeholder.svg?height=30&width=30" alt="Logo" class="logo-img">
+    </div>
+    <header>
+       
+        <h1>EXECOM 24</h1>
+    </header>
+
+    <main>
+        <div class="members-container">
+            <div class="member">
+                <div class="photo-container">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Member 1" class="member-photo">
+                    <a href="https://www.linkedin.com/in/member1" target="_blank" class="linkedin-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <h3>Member 1</h3>
+                <p>Designation 1</p>
+            </div>
+            <div class="member">
+                <div class="photo-container">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Member 2" class="member-photo">
+                    <a href="https://www.linkedin.com/in/member2" target="_blank" class="linkedin-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <h3>Member 2</h3>
+                <p>Designation 2</p>
+            </div>
+            <div class="member">
+                <div class="photo-container">
+                    <img src="./assets/Hisham Haskar.JPG?height=200&width=200" alt="Member 3" class="member-photo">
+                    <a href="https://www.linkedin.com/in/member3" target="_blank" class="linkedin-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <h3>Member 3</h3>
+                <p>Designation 3</p>
+            </div>
+            <div class="member">
+                <div class="photo-container">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Member 4" class="member-photo">
+                    <a href="https://www.linkedin.com/in/member4" target="_blank" class="linkedin-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <h3>Member 4</h3>
+                <p>Designation 4</p>
+            </div>
+            <div class="member">
+                <div class="photo-container">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Member 5" class="member-photo">
+                    <a href="https://www.linkedin.com/in/member5" target="_blank" class="linkedin-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <h3>Member 5</h3>
+                <p>Designation 5</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        ScrollReveal().reveal('.member', { delay: 200, distance: '50px', origin: 'bottom', interval: 200 });
+
+        document.querySelectorAll('.member-photo').forEach(photo => {
+            photo.addEventListener('click', () => {
+                photo.style.animation = 'pulse 0.5s';
+                setTimeout(() => {
+                    photo.style.animation = '';
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
