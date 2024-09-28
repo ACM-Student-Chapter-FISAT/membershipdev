@@ -245,3 +245,129 @@ h1 {
 .scroll-button:hover {
     background-color: #2a333b;
 }
+
+/* Events section*/
+.events
+{
+    margin: 50px;
+}
+.events .head
+{
+    position: relative;
+    left: 10%;
+    font-size: 50px;
+    margin: 0;
+}
+.timeline
+{
+   position: relative;
+   max-width: 1200px;
+   margin: 50px auto;
+}
+.container {
+    padding: 10px 50px;
+    position: relative;
+    left: 0;
+    width: 70%; 
+    opacity: 0; /* Initial opacity is 0 */
+    transform: translateY(-30px); /* Initial transform to move it upwards */
+    transition: transform 1s, opacity 1s; /* Transition for smooth animation */
+}
+
+.container.animate {
+    opacity: 1; /* Make it visible */
+    transform: translateY(0); /* Move down smoothly */
+}
+
+.container:nth-child(1) {
+    transition-delay: 0s; /* Add a delay to the animation */
+}
+
+.container:nth-child(2) {
+    transition-delay: 2s;
+}
+
+.container:nth-child(3) {
+    transition-delay: 4s;
+}
+
+.container:nth-child(4) {
+    transition-delay: 6s;
+}
+
+.textbox
+{
+    padding: 20px 30px;
+    background: #1E293B;;
+    border-radius: 6px;
+    position: relative;
+    left: 10px;
+    font-size: 18px;
+    color: white;
+}
+.textbox p
+{
+    color: #94A3B8;
+}
+
+.container i
+{
+    background-color: #1E293B;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 35px;
+    position: absolute;
+    color: #c2b8fb;
+    margin-right: 40px;
+    left: 0;
+    top: 32px;
+    z-index: 10;
+}
+.timeline {
+    position: relative;
+    padding-left: 50px;
+  }
+  
+  .timeline::after {
+      content: ' ';
+      position: absolute;
+      width: 6px;
+      height: 0; /* Initial height set to 0 */
+      background: white;
+      top: 40px;
+      left: 55px;
+      margin-left: -3px;
+      z-index: -1;
+      animation: none; /* No animation initially */
+  }
+  
+  .timeline.animate::after {
+     margin-left: 19px;
+      animation: moveline 7s linear forwards; /* Apply the animation when class is added */
+  }
+@keyframes moveline
+{
+    0%
+    {
+        height: 0%;
+    }
+    100%
+    {
+        height: 80%;
+    }
+}
+.textbox h1{
+    font-weight: 600px;
+}
+@media(max-width:500px)
+{
+    .timeline 
+    {
+        padding-left: 0;
+    
+    }
+    .timeline::after
+    {
+        left: 5px;
+    }
+}
