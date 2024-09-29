@@ -18,6 +18,7 @@
     object-fit: cover;
     border-radius: 16px;
     border: 5px #5C6472 solid;
+    
     /*changes*/
     
 }
@@ -27,6 +28,7 @@
     height: auto;
     border-radius: 5px;
     transform: scale(1.02);
+    
     transition: all 0.4s;
 }
 
@@ -129,27 +131,48 @@
 
 /* For mobile responsiveness */
 @media (max-width: 768px) {
+    .about-us-main{
+        padding: 5% 5%;
+    }
     .about-us-content-wrap{
-      
+        overflow-x: hidden;
+        margin:0;
+        padding: 5% 5%;
     }
     .about-us-content-container {
         grid-template-columns: 1fr;
         padding-inline: 0px;
-        gap: 40px;
+        gap: 0px;
+        display: block;
+        margin-top: 2em;
     }
     .about-us-image-wrap{
         border: 7px;
-        overflow: visible;
+        overflow: hidden;
         margin: 0;
+        border-radius: 9px;
+        
     }
-    .about-us-image-wrap img{
-        transform: scale(1.2);
-        border-radius: 0;
+    
+    .about-us-image-wrap img {
+        width: 100%;
+        height: auto;
+        border-radius: 2px;
+        transform: scale(1);
+        
+        transition: all 0.4s;
     }
+    
+    .about-us-image-wrap img:hover {
+        transform: scale(1);
+    }
+    
     .about-us-left-wrap {
         padding-right: 0;
     }
-
+    .about-us-right-wrap {
+        display: none;
+    }
     .left-wrap-text {
         font-size: 24px;
         text-align: center;
@@ -164,16 +187,18 @@
     .left-wrap-buttons{
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 1em;
+        grid-template-columns: 2;
         
 
         
     }
     .left-wrap-buttons button {
         text-align: center;
-        font-size: 13px;
+        font-size: 16px;
         margin-right: 0;
         margin-bottom: 10px;
+        
     }
 
     .left-wrap-icons {

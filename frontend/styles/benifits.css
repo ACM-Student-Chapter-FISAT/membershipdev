@@ -75,8 +75,8 @@ body {
 }
 */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
+    font-family: 'Inter', sans-serif;
+     /* background-color: #1a1a1a;  */
     color: hsl(307, 23%, 92%);
     margin: 0;
     padding: 0;
@@ -111,6 +111,7 @@ body {
 
 .b1 {
     font-size: 18px;
+    
     background: #1E293B;
     padding: 20px;
     margin: 0; /* Remove margin to use the gap from the parent container */
@@ -124,6 +125,7 @@ body {
     transform: translateY(20px); /* Initial transform for animation */
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
 
 .b1 svg {
     margin-right: 15px;
@@ -149,12 +151,13 @@ body {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .benefits {
-        padding: 30px 10px; /* Reduce padding for mobile */
+        padding: 5% 5%; /* Reduce padding for mobile */
     }
 
     .benefits1 {
         font-size: 28px; /* Smaller font size for headings */
         margin-bottom: 20px; /* Adjust margin */
+        padding: 0 5%;
     }
 
     .b1 {
