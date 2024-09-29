@@ -36,21 +36,21 @@
 }
 
 .container:nth-child(2) {
-    transition-delay: 2s;
+    transition-delay: 1s;
 }
 
 .container:nth-child(3) {
-    transition-delay: 4s;
+    transition-delay: 2s;
 }
 
 .container:nth-child(4) {
-    transition-delay: 6s;
+    transition-delay: 3s;
 }
 
 .textbox
 {
     padding: 20px 30px;
-    background: #1E293B;;
+    background: #1E293B;
     border-radius: 6px;
     position: relative;
     left: 10px;
@@ -95,7 +95,7 @@
   
   .timeline.animate::after {
      margin-left: 19px;
-      animation: moveline 7s linear forwards; /* Apply the animation when class is added */
+      animation: moveline 3s linear forwards; /* Apply the animation when class is added */
   }
 @keyframes moveline
 {

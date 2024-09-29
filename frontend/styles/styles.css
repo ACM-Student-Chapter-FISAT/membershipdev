@@ -7,22 +7,19 @@ body {
     font-optical-sizing: auto;
     background-color: #0F172A;
     color: white;
-    /*height: 1600px;*/
-    overflow: hidden; /* Hide the scroll bar */
-    height: 100vh;
-    width: 100vw;
+    height: 1600px;
+
+    width: 105vw;
     position: relative;
-    overflow-y: scroll; /* Allows scrolling but hides scrollbar */
-    scrollbar-width: none; /* For Firefox */
+   /* overflow-x: hidden;*/
+   /* overflow-y: hidden;*/
+
+    
+}
+body::-webkit-scrollbar{
+    display: none;
 }
 
-body::-webkit-scrollbar
- {
-    display: none; /* For Chrome, Safari, and Edge */
-}
-html {
-    scroll-behavior: smooth;
-}
 
 h1 {
     margin: 0;
@@ -32,7 +29,7 @@ h1 {
     padding-top: 1em;
 }
 .about-us-content-wrap {
-    max-width: 1300px;
+    max-width: 200px;
     background-color: #1E293B;
     padding: 40px;
     margin: auto;
@@ -286,3 +283,20 @@ h1 {
     }
 }
 
+.copyright
+{
+    background-color: #1E293B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  padding-top: 20px;
+}
+.credits
+{
+    background-color: #1E293B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:10px;
+    padding-bottom:30px;
+}
