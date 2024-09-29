@@ -10,6 +10,30 @@
     font-size: 42px;
     margin: 0;
 }
+@media(max-width:500px)
+{
+
+.events .head
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    left:0%;
+}
+
+}
+
+@media(max-width:100px)
+{
+
+.events .head
+{
+    position: relative;
+    left: 20%;
+    font-size: 42px;
+    margin: 0;
+}
+}
 .timeline
 {
    position: relative;
@@ -56,6 +80,13 @@
     left: 10px;
     font-size: 18px;
     color: white;
+}
+@media(max-width:500px)
+{
+.textbox
+{
+    padding: 20px 45px 10px 20px;
+}
 }
 .textbox p
 {
