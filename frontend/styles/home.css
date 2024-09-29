@@ -59,8 +59,11 @@
     font-family: "Inter", sans-serif;
     font-size: clamp(18px, 2vw, 24px);
     background-color: #19405D;
-   
- 
+}
+.member-button:hover{
+    background-color:#2980abb4 ;
+    color: white;
+    transition: background-color 0.15s ease;
 }
 .mem-btn-body{
     display: none;
@@ -68,7 +71,7 @@
 .home-container {
     max-width: 1200px;
     margin: auto;
-    padding: 0 5%;
+    padding: 20px 5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

@@ -84,7 +84,7 @@ body {
 }
 
 .benefits {
-    padding: 50px 20px;
+    padding: 2% 20px;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
@@ -99,7 +99,16 @@ body {
 .benefits,
 .benefits1 {
     border: none; /* Remove any borders if accidentally added */
+    
 }
+
+
+.benefits1 {
+    font-size: 28px; /* Smaller font size for headings */
+    margin-bottom: 50px; /* Adjust margin */
+    padding: 0 0;
+}
+
 
 /* Benefit Items */
 .benefits-list {
@@ -156,7 +165,7 @@ body {
 
     .benefits1 {
         font-size: 28px; /* Smaller font size for headings */
-        margin-bottom: 20px; /* Adjust margin */
+        margin-bottom: 40px; /* Adjust margin */
         padding: 0 5%;
     }
 
