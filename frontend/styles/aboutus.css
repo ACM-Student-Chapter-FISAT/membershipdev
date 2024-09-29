@@ -27,13 +27,13 @@
     width: 100%;
     height: auto;
     border-radius: 5px;
-    transform: scale(1.02);
-    
+    transform: scale(1.04);
+
     transition: all 0.4s;
 }
 
 .about-us-image-wrap img:hover {
-    transform: scale(1.04);
+    transform: scale(1.06);
 }
 
 .about-us-content-container {
@@ -48,12 +48,14 @@
 
 .about-us-left-wrap {
     padding-right: 5px;
+    grid-column: span 2;
 }
 
 .left-wrap-text {
     font-size: 32px;
     color: white;
     margin-bottom: 42px;
+    text-align: center;
 }
 
 .left-wrap-text h1 {
@@ -69,13 +71,16 @@
 
 .left-wrap-buttons {
     margin-bottom: 4em;
-    text-align: start;
+    /* text-align: start; */
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
 }
 
 .left-wrap-buttons button {
-    padding: 15px 40px;
-    margin: 20px 20px 20px 0;
+    padding: 15px 30px;
+
     border: none;
     font-weight: bold;
     font-family: "Inter", sans-serif;
@@ -85,6 +90,7 @@
     color: white;
     border-radius: 4px;
     cursor: pointer;
+    width: 12em;
 }
 
 .left-wrap-buttons .register {
@@ -93,6 +99,7 @@
     border-radius: 4px;
     text-decoration: none;
     color: white;
+    
 
     background-color: #19405D;
 }
@@ -157,7 +164,7 @@
     .about-us-image-wrap img {
         width: 100%;
         height: auto;
-        border-radius: 2px;
+        border-radius: 9px;
         transform: scale(1);
         
         transition: all 0.4s;
@@ -189,6 +196,7 @@
         justify-content: center;
         gap: 1em;
         grid-template-columns: 2;
+        margin-bottom: 4em;
         
 
         
@@ -197,7 +205,9 @@
         text-align: center;
         font-size: 16px;
         margin-right: 0;
-        margin-bottom: 10px;
+        margin-bottom: 0;
+        margin-top: 1rem;
+        width: 13em;
         
     }
 
@@ -218,5 +228,13 @@
 
     .feature p {
         font-size: 18px;
+    }
+}
+@media (max-width: 520px) {
+    .left-wrap-buttons{
+        gap: 0;
+        
+
+        
     }
 }

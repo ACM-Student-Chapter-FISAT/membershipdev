@@ -103,7 +103,7 @@
     
     .execom-title {
         font-family: 'Inter'; 
-        font-size: 42px;
+        font-size: clamp(32px, 5vw, 42px);
     }
     
     .members-container {
