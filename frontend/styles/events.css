@@ -2,6 +2,9 @@
 .events
 {
     margin: 50px;
+    position: relative;
+    top: 60px;
+    z-index: 90;
 }
 .events .head
 {

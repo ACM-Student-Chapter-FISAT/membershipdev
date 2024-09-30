@@ -17,6 +17,10 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    z-index: 100;
+    top:0;
+    left: 0;
+  
 }
 
 .acm-logo {
@@ -37,11 +41,11 @@
 }
 /* sidebar */
 .nav-links-sidebar{
-        position: fixed;
+        position:fixed;
         top: 0; 
         right: 0;
-        height: 100vh;
-        width: 250px;
+        height: 70vh;
+        width:50vw;
         background-color: rgba(255, 255, 255, 0.15);
         backdrop-filter: blur(12px);
         box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
@@ -60,10 +64,14 @@
 .nav-links-sidebar li{
     width: 100%;
     margin-bottom: 10px;
+   
+
   }
 /* .nav-links-sidebar li:active{
     background-color: #297FAB;
   } */
+  
+
 
 .nav-links-sidebar li:first-child{
     margin-bottom: 20px;
@@ -134,12 +142,20 @@
 }
 
 .home-title h1 {
+    
     font-size: clamp(52px, 5vw, 72px);
     line-height: 1.3;
     color: #2eb9ff;
 }
 .home-title{
     margin-bottom: 2em;
+}
+@media(max-width:500px)
+{
+    .home-title
+    {
+        margin-top: 5em;
+    }
 }
 
 .home-p p {
@@ -174,8 +190,12 @@
 
     }
     .navbar {
-        padding: 20px 5%;
+        padding: 10px;
         margin-bottom: 2em;
+        position:fixed;
+        background-color: #0B1120;
+        width:100%;
+        justify-content: space-evenly;
     }
     .acm-logo{
         width: 40%;
@@ -215,6 +235,7 @@
     .home-left-wrap, .home-right-wrap {
         width: 100%;
         max-width: none;
+        margin-top:1em;
     }
 
     .home-right-wrap {
@@ -223,5 +244,10 @@
 }
 @media(max-width: 400px){
     .nav-links-sidebar{
-      width: 100%;
+      width: 80%;
     }}
+
+    .nav-links-sidebar .item1 li:hover
+    {
+        box-shadow: 0 0 4px rgba(255,255,255,0.5)
+    }

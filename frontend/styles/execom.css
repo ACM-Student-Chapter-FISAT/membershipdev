@@ -121,7 +121,7 @@
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         position: relative; /* Ensure positioned elements work */
-        animation: glow 3s infinite alternate; /* Add glow animation */
+        animation: glow 2s infinite alternate; /* Add glow animation */
     }
     
     .photo-container {
@@ -169,7 +169,7 @@
             box-shadow: 0 0 5px rgba(0, 255, 255, 0.5), 0 0 5px rgba(0, 255, 255, 0.3), 0 0 5px rgba(0, 255, 255, 0.2);
         }
         100% {
-            box-shadow: 0 0 5px rgba(0, 255, 255, 1), 0 0 9px rgba(0, 255, 255, 0.8), 0 0 11px rgba(0, 255, 255, 0.6);
+            box-shadow: 0 0 6px rgba(0, 255, 255, 1), 0 0 12px rgba(0, 255, 255, 0.8), 0 0 18px rgba(0, 255, 255, 0.6);
         }
     }
     
