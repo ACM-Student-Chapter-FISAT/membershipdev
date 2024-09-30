@@ -29,18 +29,28 @@
             </div>
             
             <ul class="nav-links">
-                <li><a href="#about-us">About Us</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#execome">EXECOM</a></li>
+                <li class="hideOnMobile"><a href="#about-us">About Us</a></li>
+                <li class="hideOnMobile"><a href="#events">Events</a></li>
+                <li class="hideOnMobile"><a href="#benefits">Benefits</a></li>
+                <li class="hideOnMobile"><a href="#execome">EXECOM</a></li>
             </ul>
+
             
+
             
             <div class="member-btn-wrap mem-btn-head">
                 <a href="https://forms.gle/57aEnsfiJmWgvQTh8" class="member-button">Be a Member</a>
-                <div class="nav-toggle" onclick="toggleMenu()">☰</div>
                 
             </div>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+
+            <ul class="nav-links-sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+                <li onclick=hideSidebar()><a href="#about-us">About Us</a></li>
+                <li onclick=hideSidebar()><a href="#events">Events</a></li>
+                <li onclick=hideSidebar()><a href="#benefits">Benefits</a></li>
+                <li onclick=hideSidebar()><a href="#execome">EXECOM</a></li>
+            </ul>
             
             
         </nav>
@@ -295,11 +305,23 @@
         </main>
     
     </section>
+    
      <!-- Scroll Up and Down buttons -->
      <button class="scroll-button scroll-up" id="scrollUpBtn">⬆</button>
      <button class="scroll-button scroll-down" id="scrollDownBtn">⬇</button>
  
      <script>
+        let isSidebarVisible = false;
+        function showSidebar(){
+            const sidebar = document.querySelector('.nav-links-sidebar');
+            sidebar.style.display = 'flex'
+    
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.nav-links-sidebar')
+            sidebar.style.display = 'none'
+           
+    }
          // Scroll Up button functionality
          document.getElementById('scrollUpBtn').addEventListener('click', function() {
              window.scrollBy({
