@@ -132,9 +132,13 @@ body {
     box-sizing: border-box;
     opacity: 0; /* Initial opacity for animation */
     transform: translateY(20px); /* Initial transform for animation */
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
-
+@media (max-width: 768px) {
+    .b1 {
+        transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    }
+}
 
 .b1 svg {
     margin-right: 15px;
