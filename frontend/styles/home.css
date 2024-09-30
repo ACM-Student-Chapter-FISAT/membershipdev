@@ -12,7 +12,7 @@
 }
 
 .navbar {
-    padding: 40px 5% 60px;
+    padding:20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,7 +44,7 @@
         position:fixed;
         top: 0; 
         right: 0;
-        height: 70vh;
+        height: 98vh;
         width:50vw;
         background-color: rgba(255, 255, 255, 0.15);
         backdrop-filter: blur(12px);
