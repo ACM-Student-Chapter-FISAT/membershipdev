@@ -35,7 +35,58 @@
     padding: 0;
     flex-wrap: wrap;
 }
+/* sidebar */
+.nav-links-sidebar{
+        position: fixed;
+        top: 0; 
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 5% 5%;     
+        /* transform: translateX(100%); */
+        /* transition: transform 1s ease; */
+}
 
+
+.nav-links-sidebar li{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+/* .nav-links-sidebar li:active{
+    background-color: #297FAB;
+  } */
+
+.nav-links-sidebar li:first-child{
+    margin-bottom: 20px;
+    svg{
+        fill: white;
+    }
+  }
+  .nav-links-sidebar a{
+    text-decoration: none;
+    color: #E2E8F0;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+
+  }
+  .menu-button{
+    display: none;
+    
+    svg{
+        fill: white;
+    }
+  }
+  
+/* sidebarend */
 .nav-links li a {
     text-decoration: none;
     color: #E2E8F0;
@@ -136,6 +187,12 @@
     .nav-toggle {
         display: block;
     }
+    .hideOnMobile{
+        display: none;
+      }
+      .menu-button{
+        display: block;
+      }
     .member-button, .home-join {
         padding: 16px 24px; 
     }
@@ -164,3 +221,7 @@
         margin-top: 2em;
     }
 }
+@media(max-width: 400px){
+    .nav-links-sidebar{
+      width: 100%;
+    }}
